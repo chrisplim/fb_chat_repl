@@ -1,0 +1,11 @@
+{
+  "name": "fb-chat-repl",
+  "version": "0.1.0",
+  "description": "fb chat repl for the terminal",
+  "dependencies": {
+    "facebook-chat-api": ">=1.0.5",
+    "prompt": "^0.2.14",
+    "image-to-ascii": "=3.0.7"
+  },
+  "private": true
+}
