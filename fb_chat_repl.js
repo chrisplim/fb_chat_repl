@@ -188,7 +188,19 @@ function saveThread(threadID) {
     }
     addThread(threadInfo)
   } else {
-    console.log("Couldn't find user for this thread ID: "+threadID)
+    //Could be group message
+    api.getThreadInfo(threadID, (err, info) => {
+      if (err) {
+        console.log("No such thread ID: "+threadID)
+      } else {
+        console.log(info)
+        var threadInfo = {
+          id: threadID,
+          name: info.name
+        }
+        addThread(threadInfo)
+      }
+    })
   }
 }
 
